@@ -3,7 +3,10 @@
  * For more info: https://developer.wordpress.org/themes/basics/theme-functions/
  *
  */			
-	
+
+// BFI thumb cropping tools
+require_once('bfithumb.php');
+
 // Theme support options
 require_once(get_template_directory().'/functions/theme-support.php'); 
 
@@ -27,31 +30,3 @@ require_once(get_template_directory().'/functions/page-navi.php');
 
 // Adds support for multiple languages
 require_once(get_template_directory().'/functions/translation/translation.php'); 
-
-// Adds site styles to the WordPress editor
-// require_once(get_template_directory().'/functions/editor-styles.php'); 
-
-// Remove Emoji Support
-// require_once(get_template_directory().'/functions/disable-emoji.php'); 
-
-// Related post function - no need to rely on plugins
-// require_once(get_template_directory().'/functions/related-posts.php'); 
-
-// Use this as a template for custom post types
-// require_once(get_template_directory().'/functions/custom-post-type.php');
-
-// Customize the WordPress login menu
-// require_once(get_template_directory().'/functions/login.php'); 
-
-// Customize the WordPress admin
-// require_once(get_template_directory().'/functions/admin.php'); 
-
-function excerpt_read_more_link($output) {
-  global $post;
-  if ($post->post_type != 'custom_post_type')
-  {
-    $output .= '<a href="'. get_permalink($post->ID) . '" class="news-event-more">read more</a>';  
-  }
-  return $output;
-}
-add_filter('the_excerpt', 'excerpt_read_more_link');

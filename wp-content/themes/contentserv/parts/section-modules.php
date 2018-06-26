@@ -64,10 +64,15 @@ if(get_sub_value( 'add_featured_page' ) != "") { ?>
 <section class="featured-page">
 	
 <div class="container grid-x grid-margin-x">
+<div class="highlight-content large-offset-2 large-8 cell">
+	<?php the_sub_value('cs_content_description'); ?>
+</div>
 <?php while( have_groups( 'add_featured_page' ) ): the_group() ?>
 <div class="large-4 cell">
 	<?php $post_object = get_sub_value( 'cs_add_page' ); ?>
-    <h4><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a></h4>
+    <h4><a href="<?php echo get_permalink($post_object->ID); ?>">
+	<?php if (get_sub_value('cs_custom_title') != "") { echo get_sub_value('cs_custom_title'); } else { echo get_the_title($post_object->ID); } ?>
+	</a></h4>
 	<?php echo get_sub_value( 'custom_description' ); ?>
 	<a href="<?php echo get_permalink($post_object->ID); ?>" class="more-info">More Info</a>
 </div>

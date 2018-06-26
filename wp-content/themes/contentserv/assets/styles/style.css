@@ -110,6 +110,14 @@ a.hero-link:hover {
 section.featured-page {
     padding: 75px 0;
 }
+section.featured-page .highlight-content {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #3246a7;
+}
+section.featured-page .highlight-content h3 {
+    color: #3246a7;
+}
 /* END FEATURED PAGE */
 
 /* START NEWS, EVENTS AND ABOUT SECTION */
