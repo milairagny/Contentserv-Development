@@ -167,8 +167,6 @@ if(get_sub_value( 'add_banner_section_module' ) != "") { ?>
 	</div>
 </section>
 <?php } ?>
-<?php } 
-// END Banner Section
-?>
+<?php } // END Banner Section ?>
 
 <?php endwhile ?>
