@@ -5,7 +5,7 @@
 <?php // START News, Events & About ?>
 <?php if(get_sub_value( 'add_news_events_and_about_section' ) != "") { ?>
 <section class="news-about">
-	<div class="container grid-x">
+	<div class="container grid-x grid-margin-x">
 		<div class="large-6">
 		<h3 class="latest-blog">News & Events</h3>
 <?php if (get_sub_value("featured_news_and_events") != "") { ?>
@@ -62,8 +62,9 @@ $args = array(
 // START Featured Page Section
 if(get_sub_value( 'add_featured_page' ) != "") { ?>
 <section class="featured-page">
-	
+
 <div class="container grid-x grid-margin-x">
+<?php if(get_sub_value('featured_page_template', 'options') == 'featured_layout_one') { ?>
 <div class="highlight-content large-offset-2 large-8 cell">
 	<?php the_sub_value('cs_content_description'); ?>
 </div>
@@ -77,6 +78,22 @@ if(get_sub_value( 'add_featured_page' ) != "") { ?>
 	<a href="<?php echo get_permalink($post_object->ID); ?>" class="more-info">More Info</a>
 </div>
 <?php endwhile ?>
+<?php } else { ?>
+<div class="large-offset-2 large-8 cell">
+	<?php the_sub_value('cs_content_description_two'); ?>
+</div>
+<?php while( have_groups( 'add_featured_page_two' ) ): the_group() ?>
+<div class="large-6 cell">
+	<?php $post_object = get_sub_value( 'cs_add_page' ); ?>
+    <h4><a href="<?php echo get_permalink($post_object->ID); ?>">
+	<?php if (get_sub_value('cs_custom_title') != "") { echo get_sub_value('cs_custom_title'); } else { echo get_the_title($post_object->ID); } ?>
+	</a></h4>
+	<?php echo get_sub_value( 'custom_description' ); ?>
+	<a href="<?php echo get_permalink($post_object->ID); ?>" class="more-info">More Info</a>
+</div>
+<?php endwhile ?>
+<?php } ?>	
+	
 </div>
 	
 </section>

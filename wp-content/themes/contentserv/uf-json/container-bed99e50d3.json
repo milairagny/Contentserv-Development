@@ -1,0 +1,219 @@
+[
+    {
+        "type": "container",
+        "id": "bed99e50d3",
+        "title": "Featured Page Section",
+        "locations": [
+            {
+                "type": "Options",
+                "page": {
+                    "id": "featured-page-section",
+                    "title": "Featured Page Section",
+                    "type": "appearance"
+                }
+            }
+        ],
+        "fields": [
+            {
+                "name": "featured_page_template",
+                "label": "Featured Page Template",
+                "type": "Select",
+                "select_input_type": "radio",
+                "select_orientation": "horizontal",
+                "select_options": {
+                    "featured_layout_one": "1",
+                    "featured_layout_two": "2"
+                },
+                "select_output_data_type": ""
+            },
+            {
+                "name": "content_design_one",
+                "label": "Content Design 1",
+                "type": "Section",
+                "description": "<img src=\"http:\/\/localhost\/contentserv\/wp-content\/uploads\/2018\/06\/content-1.jpg\" style=\"width: 100%;\">",
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_page_template",
+                            "value": "featured_layout_one",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "section_color": "white"
+            },
+            {
+                "name": "content_design_two",
+                "label": "Content Design 2",
+                "type": "Section",
+                "description": "<img src=\"http:\/\/localhost\/contentserv\/wp-content\/uploads\/2018\/06\/content-2.jpg\" style=\"width: 100%;\">",
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_page_template",
+                            "value": "featured_layout_two",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "section_color": "white"
+            },
+            {
+                "name": "cs_content_description",
+                "label": "Content Description",
+                "type": "WYSIWYG",
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_page_template",
+                            "value": "featured_layout_one",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "rows": 10,
+                "apply_wpautop": true
+            },
+            {
+                "name": "cs_content_description_two",
+                "label": "Content Description",
+                "type": "WYSIWYG",
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_page_template",
+                            "value": "featured_layout_two",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "rows": 10,
+                "apply_wpautop": true
+            },
+            {
+                "name": "add_featured_page",
+                "label": "Add Featured Page",
+                "type": "Repeater",
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_page_template",
+                            "value": "featured_layout_one",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "repeater_maximum": 3,
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "add_page",
+                        "title": "Add Page",
+                        "style": "auto",
+                        "fields": [
+                            {
+                                "name": "cs_add_page",
+                                "label": "Add Page",
+                                "type": "WP_Object",
+                                "field_width": "33",
+                                "wp_object_text": "Select item",
+                                "wp_object_types": [
+                                    "posts"
+                                ],
+                                "wp_object_post_types": [
+                                    "page"
+                                ]
+                            },
+                            {
+                                "name": "cs_custom_title",
+                                "label": "Custom Title",
+                                "type": "Text",
+                                "field_width": "33"
+                            },
+                            {
+                                "name": "add_thumbnail",
+                                "label": "Add Thumbnail",
+                                "type": "Image",
+                                "field_width": "34",
+                                "allowed_filetype": "image",
+                                "file_output_type": "",
+                                "image_output_type": "",
+                                "image_size": ""
+                            },
+                            {
+                                "name": "custom_description",
+                                "label": "Custom Description",
+                                "type": "Textarea",
+                                "rows": 10
+                            }
+                        ],
+                        "border_color": "#dddddd"
+                    }
+                ]
+            },
+            {
+                "name": "add_featured_page_two",
+                "label": "Add Featured Page",
+                "type": "Repeater",
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_page_template",
+                            "value": "featured_layout_two",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "repeater_maximum": 2,
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "add_page",
+                        "title": "Add Page",
+                        "style": "auto",
+                        "fields": [
+                            {
+                                "name": "cs_add_page",
+                                "label": "Add Page",
+                                "type": "WP_Object",
+                                "field_width": "33",
+                                "wp_object_text": "Select item",
+                                "wp_object_types": [
+                                    "posts"
+                                ],
+                                "wp_object_post_types": [
+                                    "page"
+                                ]
+                            },
+                            {
+                                "name": "cs_custom_title",
+                                "label": "Custom Title",
+                                "type": "Text",
+                                "field_width": "33"
+                            },
+                            {
+                                "name": "add_thumbnail",
+                                "label": "Add Thumbnail",
+                                "type": "Image",
+                                "field_width": "34",
+                                "allowed_filetype": "image",
+                                "file_output_type": "",
+                                "image_output_type": "",
+                                "image_size": ""
+                            },
+                            {
+                                "name": "custom_description",
+                                "label": "Custom Description",
+                                "type": "Textarea",
+                                "rows": 10
+                            }
+                        ],
+                        "border_color": "#dddddd"
+                    }
+                ]
+            }
+        ],
+        "hash": "bed99e50d3",
+        "modified": 1530083562
+    }
+]

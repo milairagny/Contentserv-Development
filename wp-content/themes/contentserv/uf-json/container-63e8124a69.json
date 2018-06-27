@@ -1,0 +1,328 @@
+[
+    {
+        "type": "container",
+        "id": "63e8124a69",
+        "title": "Hero Section",
+        "layout": "grid",
+        "locations": [
+            {
+                "type": "Options",
+                "page": {
+                    "id": "hero-section",
+                    "title": "Hero Section",
+                    "type": "appearance"
+                }
+            }
+        ],
+        "fields": [
+            {
+                "name": "add_banner_section_module",
+                "label": "Add Banner Section",
+                "type": "Checkbox",
+                "fancy_checkbox": true
+            },
+            {
+                "name": "banner_section",
+                "label": "Banner Section",
+                "type": "Select",
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "select_input_type": "radio",
+                "select_orientation": "horizontal",
+                "select_options": {
+                    "banner_static": "Banner Static",
+                    "banner_slider": "Banner Slider"
+                },
+                "select_output_data_type": ""
+            },
+            {
+                "name": "banner_content_position",
+                "label": "Content Position",
+                "type": "Select",
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_section",
+                            "value": "banner_static",
+                            "compare": "="
+                        },
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "select_input_type": "radio",
+                "select_orientation": "horizontal",
+                "select_options": {
+                    "banner_content_left": "Left",
+                    "banner_content_center": "Center",
+                    "banner_content_right": "Right"
+                },
+                "select_output_data_type": ""
+            },
+            {
+                "name": "left_content_design",
+                "label": "Left Content Design",
+                "type": "Section",
+                "description": "<img src=\"http:\/\/localhost\/contentserv\/wp-content\/uploads\/2018\/06\/hero-1.jpg\" style=\"width: 100%;\">",
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_content_position",
+                            "value": "banner_content_left",
+                            "compare": "="
+                        },
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "section_color": "white"
+            },
+            {
+                "name": "center_content_design",
+                "label": "Center Content Design",
+                "type": "Section",
+                "description": "<img src=\"http:\/\/localhost\/contentserv\/wp-content\/uploads\/2018\/06\/hero-2.jpg\" style=\"width: 100%;\">",
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_content_position",
+                            "value": "banner_content_center",
+                            "compare": "="
+                        },
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "section_color": "white"
+            },
+            {
+                "name": "right_content_design",
+                "label": "Right Content Design",
+                "type": "Section",
+                "description": "<img src=\"http:\/\/localhost\/contentserv\/wp-content\/uploads\/2018\/06\/hero-3.jpg\" style=\"width: 100%;\">",
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_content_position",
+                            "value": "banner_content_right",
+                            "compare": "="
+                        },
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "section_color": "white"
+            },
+            {
+                "name": "banner_static_content",
+                "label": "Banner Content",
+                "type": "Textarea",
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_section",
+                            "value": "banner_static",
+                            "compare": "="
+                        },
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "rows": 10,
+                "apply_wpautop": true
+            },
+            {
+                "name": "static_add_image",
+                "label": "Add image",
+                "type": "Image",
+                "field_width": 33,
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_section",
+                            "value": "banner_static",
+                            "compare": "="
+                        },
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "allowed_filetype": "image",
+                "file_output_type": "url",
+                "image_output_type": "url",
+                "image_size": "thumbnail"
+            },
+            {
+                "name": "static_add_background_image",
+                "label": "Add Background Image",
+                "type": "Image",
+                "field_width": 33,
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "allowed_filetype": "image",
+                "file_output_type": "url",
+                "image_output_type": "url",
+                "image_size": "thumbnail"
+            },
+            {
+                "name": "static_set_background_image_height",
+                "label": "Set Background Image Height",
+                "type": "Text",
+                "field_width": 34,
+                "description": "Add numbers only no need to add pixel extension.\ni.e. 500",
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "output_format": "none"
+            },
+            {
+                "name": "learn_more_link",
+                "label": "Learn More Link",
+                "type": "Link",
+                "default_value": {
+                    "link": false,
+                    "new_tab": false
+                },
+                "field_width": 50,
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "wp_object_text": "Select item",
+                "wp_object_output_type": "",
+                "wp_object_types": [
+                    "posts"
+                ],
+                "wp_object_post_types": [
+                    "page"
+                ]
+            },
+            {
+                "name": "download_report_link",
+                "label": "Download Report Link",
+                "type": "Link",
+                "default_value": {
+                    "link": false,
+                    "new_tab": false
+                },
+                "field_width": 50,
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_banner_section_module",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "wp_object_text": "Select item",
+                "wp_object_output_type": "",
+                "wp_object_types": [
+                    "posts"
+                ],
+                "wp_object_post_types": [
+                    "page"
+                ]
+            },
+            {
+                "name": "slider_fields",
+                "label": "Slider Fields",
+                "type": "Repeater",
+                "dependencies": [
+                    [
+                        {
+                            "field": "banner_section",
+                            "value": "banner_slider",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "repeater_maximum": 5,
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "slider_value",
+                        "title": "Slider Value",
+                        "style": "auto",
+                        "fields": [
+                            {
+                                "name": "content_position",
+                                "label": "Content Position",
+                                "type": "Select",
+                                "select_input_type": "radio",
+                                "select_orientation": "horizontal",
+                                "select_options": {
+                                    "slider_banner_content_left": "Left",
+                                    "slider_banner_content_center": "Center",
+                                    "slider_banner_content_right": "Right"
+                                },
+                                "select_output_data_type": ""
+                            },
+                            {
+                                "name": "slider_add_content",
+                                "label": "Add Content",
+                                "type": "WYSIWYG",
+                                "rows": 10
+                            },
+                            {
+                                "name": "slider_add_background",
+                                "label": "Add Background",
+                                "type": "Image",
+                                "allowed_filetype": "image",
+                                "file_output_type": "",
+                                "image_output_type": "",
+                                "image_size": ""
+                            }
+                        ],
+                        "border_color": "#dddddd"
+                    }
+                ]
+            }
+        ],
+        "hash": "63e8124a69",
+        "modified": 1530077611
+    }
+]

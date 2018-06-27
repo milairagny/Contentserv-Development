@@ -1,0 +1,233 @@
+[
+    {
+        "type": "container",
+        "id": "ae8b715a93",
+        "title": "Theme Options",
+        "layout": "grid",
+        "locations": [
+            {
+                "type": "Options",
+                "page": {
+                    "id": "theme-options",
+                    "title": "Theme Options",
+                    "type": "appearance"
+                }
+            }
+        ],
+        "fields": [
+            {
+                "name": "company_details",
+                "label": "Company Details",
+                "type": "Section",
+                "section_color": "white"
+            },
+            {
+                "name": "add_logo",
+                "label": "Add Logo",
+                "type": "Image",
+                "field_width": 50,
+                "allowed_filetype": "image",
+                "file_output_type": "url",
+                "image_output_type": "url",
+                "image_size": "large"
+            },
+            {
+                "name": "company_name",
+                "label": "Company Name",
+                "type": "Text",
+                "field_width": 50
+            },
+            {
+                "name": "company_descriptions",
+                "label": "Company Descriptions",
+                "type": "Textarea",
+                "rows": 10,
+                "apply_wpautop": true
+            },
+            {
+                "name": "add_social_media",
+                "label": "Add Social Media",
+                "type": "Section",
+                "section_color": "white"
+            },
+            {
+                "name": "facebook",
+                "label": "Facebook",
+                "type": "Text"
+            },
+            {
+                "name": "linkedin",
+                "label": "Linkedin",
+                "type": "Text"
+            },
+            {
+                "name": "twitter",
+                "label": "Twitter",
+                "type": "Text"
+            },
+            {
+                "name": "youtube",
+                "label": "YouTube",
+                "type": "Text"
+            },
+            {
+                "name": "customize_footer_column",
+                "label": "Customize Footer Column",
+                "type": "Select",
+                "select_input_type": "radio",
+                "select_options": {
+                    "two-column": "2 Columns",
+                    "three-column": "3 Columns",
+                    "four-column": "4 Columns"
+                },
+                "select_output_data_type": ""
+            },
+            {
+                "name": "two_column_grid",
+                "label": "2 Column Grid",
+                "type": "Repeater",
+                "dependencies": [
+                    [
+                        {
+                            "field": "customize_footer_column",
+                            "value": "two-column",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "repeater_maximum": 2,
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "two_column_grid",
+                        "title": "Two Column Grid",
+                        "style": "auto",
+                        "fields": [
+                            {
+                                "name": "column_add_title",
+                                "label": "Add Title",
+                                "type": "Text"
+                            },
+                            {
+                                "name": "two_select_page",
+                                "label": "Select Page",
+                                "type": "WP_Objects",
+                                "wp_object_text": "Select item",
+                                "wp_object_types": [
+                                    "posts"
+                                ],
+                                "wp_object_post_types": [
+                                    "page"
+                                ],
+                                "wp_maximum_objects": "5"
+                            }
+                        ],
+                        "border_color": "#dddddd"
+                    }
+                ]
+            },
+            {
+                "name": "three_column_grid",
+                "label": "3 Column Grid",
+                "type": "Repeater",
+                "dependencies": [
+                    [
+                        {
+                            "field": "customize_footer_column",
+                            "value": "three-column",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "repeater_maximum": 3,
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "three_column_grid",
+                        "title": "Three Column Grid",
+                        "style": "auto",
+                        "fields": [
+                            {
+                                "name": "column_add_title",
+                                "label": "Add Title",
+                                "type": "Text"
+                            },
+                            {
+                                "name": "two_select_page",
+                                "label": "Select Page",
+                                "type": "WP_Objects",
+                                "wp_object_text": "Select item",
+                                "wp_object_types": [
+                                    "posts"
+                                ],
+                                "wp_object_post_types": [
+                                    "page"
+                                ],
+                                "wp_maximum_objects": "5"
+                            }
+                        ],
+                        "border_color": "#dddddd"
+                    }
+                ]
+            },
+            {
+                "name": "four_column_grid",
+                "label": "4 Column Grid",
+                "type": "Repeater",
+                "dependencies": [
+                    [
+                        {
+                            "field": "customize_footer_column",
+                            "value": "four-column",
+                            "compare": "="
+                        }
+                    ]
+                ],
+                "repeater_maximum": 4,
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "four_column_grid",
+                        "title": "Four Column Grid",
+                        "style": "auto",
+                        "fields": [
+                            {
+                                "name": "column_add_title",
+                                "label": "Add Title",
+                                "type": "Text"
+                            },
+                            {
+                                "name": "four_select_page",
+                                "label": "Select Page",
+                                "type": "WP_Objects",
+                                "wp_object_text": "Select item",
+                                "wp_object_types": [
+                                    "posts"
+                                ],
+                                "wp_object_post_types": [
+                                    "page"
+                                ],
+                                "wp_maximum_objects": "5"
+                            }
+                        ],
+                        "border_color": "#dddddd"
+                    }
+                ]
+            },
+            {
+                "name": "custom_copyright_text",
+                "label": "Custom Copyright Text",
+                "type": "Text"
+            },
+            {
+                "name": "footer_add_script",
+                "label": "Add Script",
+                "type": "Textarea",
+                "description": "i.e Google Analytics or any tracking script.",
+                "rows": 10
+            }
+        ],
+        "hash": "ae8b715a93",
+        "modified": 1530076989
+    }
+]

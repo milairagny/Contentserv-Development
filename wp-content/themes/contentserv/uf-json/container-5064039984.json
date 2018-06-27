@@ -1,0 +1,55 @@
+[
+    {
+        "type": "container",
+        "id": "5064039984",
+        "title": "All Modules",
+        "locations": [
+            {
+                "type": "Post_Type",
+                "post_types": [
+                    "page"
+                ],
+                "templates": [
+                    "template-beta.php"
+                ],
+                "context": "after_title"
+            }
+        ],
+        "fields": [
+            {
+                "name": "all_modules",
+                "label": "All Modules",
+                "type": "Repeater",
+                "repeater_background_color": "#fff",
+                "repeater_groups": [
+                    {
+                        "type": "hero_section",
+                        "title": "Hero Section",
+                        "style": "auto",
+                        "fields_source": "container",
+                        "container": "63e8124a69",
+                        "border_color": "#dddddd"
+                    },
+                    {
+                        "type": "featured_page_section",
+                        "title": "Featured Page Section",
+                        "style": "auto",
+                        "fields_source": "container",
+                        "container": "bed99e50d3",
+                        "border_color": "#dddddd"
+                    },
+                    {
+                        "type": "news_events_and_about_section",
+                        "title": "News Events And About Section",
+                        "style": "auto",
+                        "fields_source": "container",
+                        "container": "6ebc0000f3",
+                        "border_color": "#dddddd"
+                    }
+                ]
+            }
+        ],
+        "hash": "5064039984",
+        "modified": 1530077061
+    }
+]

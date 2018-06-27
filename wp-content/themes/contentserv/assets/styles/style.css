@@ -11,8 +11,6 @@ body {
 }
 .container {
     max-width: 1422px;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -170,9 +168,10 @@ a.more-news:hover {
 /* END NEWS, EVENTS AND ABOUT SECTION */
 
 /* START FOOTER SECTION */
+section.footer-section {
+    padding-top: 50px;
+}
 .footer-logo-container, .links-social-container, .newsletter-container {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 30px;
     margin-bottom: 30px;
 }
 .links-social-container {
@@ -194,6 +193,7 @@ a.more-news:hover {
 }
 .newsletter-container {
     width: 100%;
+	margin-top: 30px;
 }
 .footer-content-handler span {
     margin-bottom: 0;
@@ -240,6 +240,6 @@ input.newsletter-check {
 }
 .copyright-container {
 	width: 100%;
-    padding: 0 0 30px;
+    padding-bottom: 30px;
 }
 /* END FOOTER SECTION */

@@ -1,0 +1,97 @@
+[
+    {
+        "type": "container",
+        "id": "6ebc0000f3",
+        "title": "News, Events and About Section",
+        "layout": "grid",
+        "locations": [
+            {
+                "type": "Options",
+                "page": {
+                    "id": "news-events-and-about-section",
+                    "title": "News, Events and About Section",
+                    "type": "appearance"
+                }
+            }
+        ],
+        "fields": [
+            {
+                "name": "add_news_events_and_about_section",
+                "label": "News, Events and About Section",
+                "type": "Checkbox",
+                "fancy_checkbox": true
+            },
+            {
+                "name": "featured_news_and_events",
+                "label": "Featured News and Events post?",
+                "type": "Checkbox",
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_news_events_and_about_section",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "fancy_checkbox": true
+            },
+            {
+                "name": "cs_select_post",
+                "label": "Select Post",
+                "type": "WP_Objects",
+                "default_value": [],
+                "dependencies": [
+                    [
+                        {
+                            "field": "featured_news_and_events",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "wp_object_text": "Select News and Events post",
+                "wp_object_output_type": "",
+                "wp_object_types": [
+                    "posts"
+                ],
+                "wp_object_post_types": [
+                    "post"
+                ],
+                "wp_maximum_objects": 2
+            },
+            {
+                "name": "first_title",
+                "label": "First Title",
+                "type": "Text",
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_news_events_and_about_section",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "about_us_descriptions",
+                "label": "About Us Descriptions",
+                "type": "WYSIWYG",
+                "dependencies": [
+                    [
+                        {
+                            "field": "add_news_events_and_about_section",
+                            "value": "",
+                            "compare": "NOT_NULL"
+                        }
+                    ]
+                ],
+                "rows": 10,
+                "apply_wpautop": true
+            }
+        ],
+        "hash": "6ebc0000f3",
+        "modified": 1530077516
+    }
+]
