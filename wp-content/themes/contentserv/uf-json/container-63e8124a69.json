@@ -150,8 +150,7 @@
                         }
                     ]
                 ],
-                "rows": 10,
-                "apply_wpautop": true
+                "rows": 10
             },
             {
                 "name": "static_add_image",
@@ -323,6 +322,6 @@
             }
         ],
         "hash": "63e8124a69",
-        "modified": 1530077611
+        "modified": 1530611626
     }
 ]

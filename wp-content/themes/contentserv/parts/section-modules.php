@@ -122,7 +122,6 @@ if(get_sub_value( 'add_banner_section_module' ) != "") { ?>
 	<div class="container grid-x grid-margin-x">
 		<div class="content-handler large-6 cell" data-equalizer-watch>
 			<div class="banner-content-container">
-			<span><?php the_sub_value("add_title"); ?></span>
 			<?php the_sub_value( 'banner_static_content' ); ?>
 			<a class="hero-link" href="<?php the_sub_value( 'learn_more_link' ); ?>">Learn More</a>
 			<a class="hero-link" href="<?php the_sub_value( 'download_report_link' ); ?>">Download Report</a>

@@ -45,11 +45,19 @@
                         "fields_source": "container",
                         "container": "6ebc0000f3",
                         "border_color": "#dddddd"
+                    },
+                    {
+                        "type": "video_with_background_section",
+                        "title": "Video With Background Section",
+                        "style": "auto",
+                        "fields_source": "container",
+                        "container": "810160ebbf",
+                        "border_color": "#dddddd"
                     }
                 ]
             }
         ],
         "hash": "5064039984",
-        "modified": 1530077061
+        "modified": 1530617810
     }
 ]

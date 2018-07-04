@@ -1,0 +1,43 @@
+[
+    {
+        "type": "container",
+        "id": "810160ebbf",
+        "title": "Video with Background Section",
+        "locations": [
+            {
+                "type": "Options",
+                "page": "theme-options"
+            }
+        ],
+        "fields": [
+            {
+                "name": "youtube_id",
+                "label": "YouTube ID",
+                "type": "Text"
+            },
+            {
+                "name": "video_add_title",
+                "label": "Add Title",
+                "type": "Text"
+            },
+            {
+                "name": "video_add_description",
+                "label": "Add Description",
+                "type": "Textarea",
+                "rows": 10,
+                "apply_wpautop": true
+            },
+            {
+                "name": "video_add_background_image",
+                "label": "Add Background Image",
+                "type": "Image",
+                "allowed_filetype": "image",
+                "file_output_type": "",
+                "image_output_type": "",
+                "image_size": ""
+            }
+        ],
+        "hash": "810160ebbf",
+        "modified": 1530684583
+    }
+]
